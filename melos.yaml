@@ -3,8 +3,8 @@ repository: https://github.com/BaraaHabib/task-master
 skkPath: auto
 
 packages:
-  - modules/*
-  - '*'
+  - packages/*
+  - apps/*
 
 command:
   version:

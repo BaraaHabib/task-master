@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: task_master_storage
+dependency_overrides:
+  task_master_storage:
+    path: ..\\task_master_storage
