@@ -1,4 +1,4 @@
-import 'package:task_master_repo/src/abstractions/base_params_model.dart';
+import 'package:network_client_package/network_client.dart';
 
 /// {@template login_params}
 /// login api requests parameters

@@ -1,7 +1,7 @@
 {
   "taskMaster" : "Task master",
   "flutter": "Flutter",
-  "welcomeBack" : "مرحباً من جديد",
+  "welcomeBack" : " مرحباً من جديد",
   "username": "اسم المستخدم",
   "password": "كلمة المرور",
   "continueWithTask": "متابعة",

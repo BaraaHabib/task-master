@@ -1,6 +1,6 @@
 
 import 'package:equatable/equatable.dart';
-import 'package:task_master_repo/src/resources/exceptions.dart';
+import 'package:utils/utils.dart';
 
 
 /// {@template api_response_model}

@@ -7,8 +7,8 @@ import 'package:task_master/locator.dart';
 
 part 'login_state.dart';
 
-class LoginCubit extends Cubit<LoginState> {
-  LoginCubit() : super(LoginState.init());
+class LogInCubit extends Cubit<LoginState> {
+  LogInCubit() : super(LoginState.init());
 
   final formState = GlobalKey<FormBuilderState>();
 

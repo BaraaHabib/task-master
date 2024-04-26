@@ -1,4 +1,4 @@
-import 'package:equatable/equatable.dart';
+part of helper_models;
 
 /// general app exception
 class AppException extends Equatable implements Exception {

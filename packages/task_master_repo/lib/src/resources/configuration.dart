@@ -1,5 +1,5 @@
 
-import 'package:task_master_repo/src/network/network_client.dart';
+import 'package:network_client_package/network_client.dart';
 import 'package:task_master_storage/task_master_storage.dart';
 
 ///

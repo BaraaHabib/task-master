@@ -5,12 +5,11 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:dio_smart_retry/dio_smart_retry.dart';
+import 'package:network_client_package/src/abstractions/base_api_model.dart';
+import 'package:network_client_package/src/abstractions/base_params_model.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
-import 'package:task_master_repo/src/abstractions/base_api_model.dart';
-import 'package:task_master_repo/src/abstractions/base_params_model.dart';
-import 'package:task_master_repo/src/resources/configuration.dart';
-import 'package:task_master_repo/src/resources/exceptions.dart';
 import 'package:task_master_storage/task_master_storage.dart';
+import 'package:utils/utils.dart';
 
 part 'base_headers.dart';
 
@@ -23,8 +22,10 @@ final class NetworkClient {
   NetworkClient({
     required Dio dio,
     required String baseUrl,
+    bool logging = true,
   })
       : _dio = dio,
+        _logging = logging,
         _baseUrl = baseUrl {
     _dio.options.baseUrl = _baseUrl;
     _dio.options.connectTimeout = const Duration(minutes: 1);
@@ -32,7 +33,7 @@ final class NetworkClient {
     _dio.options.receiveTimeout = const Duration(minutes: 1);
 
     _dio.interceptors.add(RetryInterceptor(dio: _dio));
-    if (logging) {
+    if (_logging) {
       _dio.interceptors.add(
         PrettyDioLogger(
           requestHeader: true,
@@ -47,6 +48,7 @@ final class NetworkClient {
 
   final Dio _dio;
   final String _baseUrl;
+  final bool _logging;
 
   /// Get:----------------------------------------------------------------------
   Future<Response<T>> get<T>(String path, {

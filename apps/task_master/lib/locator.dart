@@ -12,9 +12,6 @@ abstract final class Locator {
   @visibleForTesting
   static final instance = GetIt.instance;
 
-  /// Returns instance of [NetworkClient]
-  static NetworkClient get networkClient => instance<NetworkClient>();
-
   /// Returns instance of [TaskMasterStorage]
   static TaskMasterStorage get storage => instance<TaskMasterStorage>();
 

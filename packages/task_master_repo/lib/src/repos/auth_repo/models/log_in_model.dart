@@ -1,6 +1,7 @@
 
 
-import 'package:task_master_repo/src/abstractions/base_api_model.dart';
+
+import 'package:network_client_package/network_client.dart';
 
 /// {@template auth_repo}
 /// Auth repo responsible for authenticating users

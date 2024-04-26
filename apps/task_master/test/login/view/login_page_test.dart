@@ -8,14 +8,15 @@ import 'package:task_master/feature/splash/splash.dart';
 
 import '../../helpers/helpers.dart';
 
-class MockLoginCubit extends MockCubit<LoginState> implements LoginCubit {}
+class MockLoginCubit extends MockCubit<LoginState> implements LogInCubit {}
 class MockSplashCubit extends MockCubit<SplashState> implements SplashCubit {}
 
 void main() {
-  group('SplashPage', () {
+  group('SplashPage', () async {
     late SplashCubit splashCubit;
 
     setUp(() {
+      TestWidgetsFlutterBinding.ensureInitialized();
       splashCubit = MockSplashCubit();
     });
 
@@ -39,25 +40,24 @@ void main() {
   });
 
   group('LoginView', () {
-    late LoginCubit loginCubit;
+    late LogInCubit loginCubit;
 
     setUp(() {
       loginCubit = MockLoginCubit();
     });
 
     testWidgets('calls login when login button is tapped',
-        (tester) async {
-      // when(() => loginCubit.logIn()).thenReturn(LoginState(status: LogInStatusEnum.success,));
+            (tester) async {
+          // when(() => loginCubit.logIn()).thenReturn(LoginState(status: LogInStatusEnum.success,));
 
-      await tester.pumpApp(
-        BlocProvider.value(
-          value: loginCubit,
-          child: const LoginView(),
-        ),
-      );
-      await tester.tap(find.byKey(const ValueKey('login')));
-      verify(() => loginCubit.logIn()).called(1);
-    });
-
+          await tester.pumpApp(
+            BlocProvider.value(
+              value: loginCubit,
+              child: const LoginView(),
+            ),
+          );
+          await tester.tap(find.byKey(const ValueKey('login')));
+          verify(() => loginCubit.logIn()).called(1);
+        });
   });
 }

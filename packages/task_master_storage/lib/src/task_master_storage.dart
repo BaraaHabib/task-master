@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:hive_flutter/hive_flutter.dart';
 
 part 'constants.dart';
-part 'state/state_utils.dart';
+part 'app_state/state_utils.dart';
 part 'tasks/tasks_utils.dart';
 
 /// {@template task_master_storage}

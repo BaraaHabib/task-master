@@ -1,0 +1,17 @@
+name: utils
+description: Holds helper models, helper functions and utils
+version: 0.0.1
+publish_to: none
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  equatable: ^2.0.3
+  http: ^1.1.0
+  meta: ^1.7.0
+
+dev_dependencies:
+  mocktail: ^0.3.0
+  test: ^1.16.0
+  very_good_analysis: ^5.1.0

@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:task_master_repo/src/network/network_client.dart';
+import 'package:network_client_package/network_client.dart';
 import 'package:task_master_repo/src/repos/auth_repo/auth_repo.dart';
 import 'package:task_master_repo/src/repos/auth_repo/iauth_repo.dart';
 import 'package:task_master_repo/src/repos/tasks_repo/itasks_repo.dart';

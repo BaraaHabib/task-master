@@ -1,6 +1,6 @@
 
 
-import 'package:task_master_repo/src/abstractions/base_api_model.dart';
+import 'package:network_client_package/network_client.dart';
 import 'package:task_master_repo/src/repos/tasks_repo/shared_models/task_api_model.dart';
 
 ///

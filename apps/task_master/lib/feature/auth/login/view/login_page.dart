@@ -19,7 +19,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => LoginCubit(),
+      create: (_) => LogInCubit(),
       child: const LoginView(),
     );
   }
@@ -31,8 +31,8 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FormBuilder(
-      key: context.read<LoginCubit>().formState,
-      child: BlocConsumer<LoginCubit, LoginState>(
+      key: context.read<LogInCubit>().formState,
+      child: BlocConsumer<LogInCubit, LoginState>(
         listenWhen: _stateHasChanged,
         listener: _listener,
         buildWhen: _stateChanged,
@@ -93,7 +93,7 @@ class LoginView extends StatelessWidget {
                     // Login Button
                     PrimaryButton(
                       key: const ValueKey('login'),
-                      onPressed: context.read<LoginCubit>().logIn,
+                      onPressed: context.read<LogInCubit>().logIn,
                       loading: state.loading,
                       content: Text(
                         context.l10n.logIn,

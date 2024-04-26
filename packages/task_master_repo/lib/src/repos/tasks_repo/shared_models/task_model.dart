@@ -9,7 +9,9 @@ part of 'task_api_model.dart';
 /// description : ""
 /// status : 1
 
-TaskApiModel taskModelFromJson(String str) => TaskApiModel.fromJson(json.decode(str));
+TaskApiModel taskModelFromJson(String str) =>
+    TaskApiModel.fromJson(json.decode(str),);
+
 String taskModelToJson(TaskApiModel data) => json.encode(data.toJson());
 
 class TaskApiModel {
@@ -19,7 +21,8 @@ class TaskApiModel {
     String? createdAt,
     String? lastUpdatedAt,
     String? description,
-    num? status,}) {
+    num? status,
+  }) {
     _id = id;
     _title = title;
     _createdAt = createdAt;
@@ -44,7 +47,8 @@ class TaskApiModel {
   String? _description;
   num? _status;
 
-  TaskApiModel copyWith({ num? id,
+  TaskApiModel copyWith({
+    num? id,
     String? title,
     String? createdAt,
     String? lastUpdatedAt,
@@ -82,5 +86,4 @@ class TaskApiModel {
     map['status'] = _status;
     return map;
   }
-
 }

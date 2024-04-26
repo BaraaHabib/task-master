@@ -1,4 +1,8 @@
-# melos_managed_dependency_overrides: task_master_storage
+# melos_managed_dependency_overrides: network_client_package,task_master_storage,utils
 dependency_overrides:
+  network_client_package:
+    path: ..\\network_client_package
   task_master_storage:
     path: ..\\task_master_storage
+  utils:
+    path: ..\\utils
