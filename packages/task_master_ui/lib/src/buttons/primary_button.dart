@@ -3,7 +3,6 @@ part of '../task_master_ui.dart';
 
 /// {@template task_master_button}
 /// Primary button
-/// [
 /// {@endtemplate}
 class PrimaryButton extends StatelessWidget {
 

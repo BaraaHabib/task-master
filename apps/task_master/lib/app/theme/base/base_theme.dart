@@ -75,7 +75,9 @@ abstract class BaseTheme {
       textTheme: TextTheme(
         titleLarge: TextStyle(color: Colors.black, fontSize: 24.sp),
         bodyMedium: TextStyle(color: Colors.grey[700]),
-        labelLarge: const TextStyle(color: Colors.white),
+        labelLarge: const TextStyle(color: Colors.white,fontWeight: FontWeight.w700),
+        labelSmall: const TextStyle(color: Colors.white,fontWeight: FontWeight.w700),
+        labelMedium: const TextStyle(color: Colors.white,fontWeight: FontWeight.w700),
       ),
       typography: Typography.material2021(),
       elevatedButtonTheme: ElevatedButtonThemeData(

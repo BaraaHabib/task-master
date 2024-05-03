@@ -1,4 +1,6 @@
 import 'package:network_client_package/network_client.dart';
+import 'package:task_master_repo/src/resources/api.dart';
+
 
 /// {@template login_params}
 /// login api requests parameters
@@ -15,7 +17,7 @@ class LogInParams extends ParamsModel<LogInParamsBody> {
   RequestType? get requestType => RequestType.post;
 
   @override
-  String? get url => 'login';
+  String? get url => authApi;
 
   @override
   Map<String, String> get urlParams => {};

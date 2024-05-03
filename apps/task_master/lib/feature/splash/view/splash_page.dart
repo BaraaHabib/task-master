@@ -2,10 +2,12 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task_master/app/generated/l10n.dart';
 import 'package:task_master/app/router/app_router.gr.dart';
 import 'package:task_master/core/assets/general_assets.dart';
 
 import 'package:task_master/feature/splash/splash.dart';
+import 'package:task_master_ui/task_master_ui.dart';
 
 @RoutePage()
 class SplashPage extends StatelessWidget {
@@ -29,9 +31,15 @@ class SplashView extends StatelessWidget {
       listenWhen: (ps, cs) => cs != ps,
       listener: (ctx, cs) {
         if (cs.status == SplashStateEnum.authenticated) {
-          AutoRouter.of(context).replace(const TasksPage());
+          AutoRouter.of(ctx).replace(const TasksPage());
         } else if (cs.status == SplashStateEnum.unauthenticated) {
-          AutoRouter.of(context).replace(const LoginPage());
+          showErrorDialog(
+            ctx,
+            canPop: false,
+            errorText: cs.errorMessage ?? '',
+            primaryText: AppLocalizations.of(context).retry,
+            primaryButtonCallback: ctx.read<SplashCubit>().init,
+          );
         }
       },
       builder: (context, state) {

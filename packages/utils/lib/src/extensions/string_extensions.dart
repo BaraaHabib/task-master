@@ -1,6 +1,5 @@
 
-
-import 'package:flutter/material.dart';
+part of extensions;
 
 extension StringExt on String{
 

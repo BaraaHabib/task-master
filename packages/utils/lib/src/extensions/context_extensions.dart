@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of extensions;
 
 extension MediaQueryExtension on BuildContext {
   MediaQueryData get mediaQuery => MediaQuery.of(this);
@@ -118,4 +118,11 @@ extension ThemeExtension on BuildContext {
 
   /// Get the brightness
   Brightness get brightness => Theme.of(this).brightness;
+}
+
+extension SpacingExtensions on BuildContext{
+
+  /// Returns 1% of the screen height
+  SizedBox get lowHeightValue => SizedBox(height: 12,);
+
 }

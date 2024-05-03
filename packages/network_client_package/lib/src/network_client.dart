@@ -195,7 +195,8 @@ final class NetworkClient {
     }
   }
 
-  ///
+  /// perform a request to API according to [model]
+  /// [parser] is used to parse response into [ApiResponseModel] object with generic type [T]
   Future<ApiResponseModel<T>> performRequest<T extends ApiSuccessModel>(
       ParamsModel model,
       {

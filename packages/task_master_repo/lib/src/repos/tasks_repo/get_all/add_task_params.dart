@@ -1,4 +1,5 @@
 import 'package:network_client_package/network_client.dart';
+import 'package:task_master_repo/src/resources/api.dart';
 
 /// {@template get_all_tasks_params}
 /// Auth repo responsible for authenticating users
@@ -15,7 +16,7 @@ class AddTaskParams extends ParamsModel<AddTaskParamsBody> {
   RequestType? get requestType => RequestType.get;
 
   @override
-  String? get url => 'resources';
+  String? get url => tasksApi;
 
   @override
   Map<String, String> get urlParams => {};

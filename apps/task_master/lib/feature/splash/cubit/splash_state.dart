@@ -7,17 +7,33 @@ enum SplashStateEnum {
 }
 
 class SplashState extends Equatable {
-  const SplashState(this.status);
+  const SplashState(this.status, {this.errorMessage,});
 
-  const SplashState.authenticated() : status = SplashStateEnum.authenticated;
-  const SplashState.unauthenticated()
-      : status = SplashStateEnum.unauthenticated;
-  const SplashState.loading() : status = SplashStateEnum.loading;
+  factory SplashState.authenticated() =>
+      const SplashState(
+        SplashStateEnum.authenticated,
+      );
+
+  factory SplashState.unauthenticated(String errorMessage) =>
+      SplashState(
+        SplashStateEnum.unauthenticated,
+        errorMessage: errorMessage,
+      );
+
+  factory SplashState.loading() =>
+      const SplashState(
+        SplashStateEnum.loading,
+      );
+
+
+  final String? errorMessage;
 
   final SplashStateEnum status;
 
   @override
-  List<Object> get props => [
+  List<Object> get props =>
+      [
         status,
+        DateTime.now(),
       ];
 }

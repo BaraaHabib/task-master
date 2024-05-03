@@ -27,6 +27,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
         "taskMaster": MessageLookupByLibrary.simpleMessage("Task master"),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage(" مرحباً من جديد")

@@ -6,7 +6,7 @@ import 'package:task_master_repo/src/repos/tasks_repo/shared_models/task_api_mod
 import 'package:task_master_repo/src/resources/configuration.dart';
 
 /// {@template auth_repo}
-/// basic operations to authenticate users
+/// basic operations to manage tasks
 /// {@endtemplate}
 class TasksRepo implements ITasksRepo {
 

@@ -11,8 +11,8 @@ import 'package:task_master_repo/src/resources/configuration.dart';
 class AuthRepo implements IAuthRepo {
 
   @override
-  Future<ApiResponseModel<LogInModel>> logIn(
-      {required String userName, required String password,}) async {
+  Future<ApiResponseModel<LogInModel>> authenticate(
+      {required String userName, required String? password,}) async {
     return networkClient.performRequest<LogInModel>(LogInParams(
       body: LogInParamsBody(
         userName: userName,

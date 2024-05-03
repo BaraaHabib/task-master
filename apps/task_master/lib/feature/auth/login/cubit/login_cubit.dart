@@ -22,7 +22,7 @@ class LogInCubit extends Cubit<LoginState> {
       final values = formState.currentState?.instantValue;
       final userName = values?[LogInFieldNames.userName.name] as String;
       final password = values?[LogInFieldNames.password.name] as String;
-      final res = await Locator.repo.auth.logIn(
+      final res = await Locator.repo.auth.authenticate(
         userName: userName,
         password: password,
       );

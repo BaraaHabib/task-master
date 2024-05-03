@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/packages/network_client_package/melos_network_client_package.iml" filepath="$PROJECT_DIR$/packages/network_client_package/melos_network_client_package.iml" />
+      <module fileurl="file://$PROJECT_DIR$/melos_task_master.iml" filepath="$PROJECT_DIR$/melos_task_master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/task_master_repo/melos_task_master_repo.iml" filepath="$PROJECT_DIR$/packages/task_master_repo/melos_task_master_repo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/task_master_storage/melos_task_master_storage.iml" filepath="$PROJECT_DIR$/packages/task_master_storage/melos_task_master_storage.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/task_master_ui/melos_task_master_ui.iml" filepath="$PROJECT_DIR$/packages/task_master_ui/melos_task_master_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/packages/utils/melos_utils.iml" filepath="$PROJECT_DIR$/packages/utils/melos_utils.iml" />
+    </modules>
+  </component>
+</project>

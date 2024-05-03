@@ -3,4 +3,5 @@
 
 export 'src/utils.dart';
 export 'src/helper_models.dart';
+export 'src/extensions/ext.dart';
 

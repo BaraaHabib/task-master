@@ -1,14 +1,11 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:task_master/app/environment/app_environment.dart';
-import 'package:task_master/core/utils/device_info/device_info_utils.dart';
-import 'package:task_master/core/utils/package_info/package_info_utils.dart';
+import 'package:task_master/firebase_options.dart';
 import 'package:task_master/locator.dart';
+import 'package:task_master_repo/task_manager_repo.dart';
 
 Future<void> bootstrap({required FutureOr<Widget> Function() builder, required AppEnvironment environment}) async {
   FlutterError.onError = (details) {
@@ -17,16 +14,14 @@ Future<void> bootstrap({required FutureOr<Widget> Function() builder, required A
   await runZonedGuarded<Future<void>>(
     () async {
       WidgetsFlutterBinding.ensureInitialized();
-      HydratedBloc.storage = await HydratedStorage.build(
-        storageDirectory: kIsWeb
-            ? HydratedStorage.webStorageDirectory
-            : await getTemporaryDirectory(),
-      );
+      /// initialize app repositories
+
       // Initialize Locator and Utils
       await Future.wait([
+        TaskManagerRepo.initAppRepos(
+            DefaultFirebaseOptions.currentPlatform,
+        ),
         Locator.locateServices(environment: environment),
-        PackageInfoUtils.init(),
-        DeviceInfoUtils.init(),
       ]);
 
       runApp(await builder());

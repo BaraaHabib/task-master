@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_master/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/task_master/build" />
+      <excludeFolder url="file://$MODULE_DIR$/task_master/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/app/task_manager_ui/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/app/task_manager_ui/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/app/task_manager_ui/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_ui/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_ui/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_ui/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/repository/task_manager_repo/lib/src/auth_repo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/repository/task_manager_repo/lib/src/auth_repo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/repository/task_manager_repo/lib/src/auth_repo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/repository/task_manager_repo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/repository/task_manager_repo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/repository/task_manager_repo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/app/task_master_storage/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/app/task_master_storage/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/app/task_master_storage/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_repo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_repo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_repo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_storage/build" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_storage/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/lib/core/modules/task_master_storage/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_repo/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_repo/build" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_repo/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_storage/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_storage/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_storage/build" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_ui/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_ui/build" />
+      <excludeFolder url="file://$MODULE_DIR$/modules/task_master_ui/.dart_tool" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Dart SDK" level="project" />
+    <orderEntry type="library" name="Dart Packages" level="project" />
+    <orderEntry type="library" name="Flutter Plugins" level="project" />
+  </component>
+</module>

@@ -1,29 +1,26 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:task_master/locator.dart';
+import 'package:utils/utils.dart';
 
 part 'splash_state.dart';
 
 class SplashCubit extends Cubit<SplashState> {
-  SplashCubit() : super(const SplashState.loading());
+  SplashCubit() : super(SplashState.loading());
 
   Future<void> init() async {
-    await Future.delayed(
-      const Duration(
-        seconds: 3,
-      ),
-      () {
-        final token = Locator.storage.getToken;
-        if (token != null) {
-          emit(
-            const SplashState.authenticated(),
-          );
-        } else {
-          emit(
-            const SplashState.unauthenticated(),
-          );
-        }
-      },
+    final res = await Locator.repo.auth.authenticate(
+      userName: await Utils.deviceId ?? '',
+      password: null,
     );
+    if (res.success) {
+      emit(
+        SplashState.authenticated(),
+      );
+    } else {
+      emit(
+        SplashState.unauthenticated(res.message ?? '',),
+      );
+    }
   }
 }
