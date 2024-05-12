@@ -1,5 +1,4 @@
 import 'package:utils/src/device_info/device_info_utils.dart';
-import 'package:utils/src/package_info/package_info_utils.dart';
 
 /// {@template utils}
 /// PackageDescription

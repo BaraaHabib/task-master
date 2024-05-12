@@ -6,7 +6,7 @@ import 'package:utils/utils.dart';
 /// {@template api_response_model}
 /// Base api model interface
 /// {@endtemplate}
-class ApiResponseModel<T extends ApiSuccessModel> {
+class ApiResponseModel<T> {
 
   /// {@macro api_response_model}
   ApiResponseModel(

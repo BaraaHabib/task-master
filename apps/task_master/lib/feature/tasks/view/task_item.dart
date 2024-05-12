@@ -10,7 +10,9 @@ class TaskItem extends StatelessWidget {
     return Container(
       height: 200.h,
       padding: EdgeInsets.all(8.r),
-      margin:  EdgeInsets.symmetric(vertical: 5.h,),
+      margin: EdgeInsets.symmetric(
+        vertical: 5.h,
+      ),
       decoration: BoxDecoration(
         // color: task.color.toHex(),
         borderRadius: BorderRadius.circular(15),
@@ -20,10 +22,8 @@ class TaskItem extends StatelessWidget {
         children: [
           Text(
             task.title ?? '',
-              style: context
-                  .textTheme
-                  .displayMedium
-                  ?.copyWith(color: Colors.white),
+            style:
+                context.textTheme.displayMedium?.copyWith(color: Colors.white),
           ),
         ],
       ),

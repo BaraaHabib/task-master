@@ -14,14 +14,14 @@ TaskApiModel taskModelFromJson(String str) =>
 
 String taskModelToJson(TaskApiModel data) => json.encode(data.toJson());
 
-class TaskApiModel {
+class TaskApiModel with EquatableMixin {
   TaskApiModel({
     num? id,
     String? title,
-    String? createdAt,
+    Timestamp? createdAt,
     String? lastUpdatedAt,
     String? description,
-    num? status,
+    TaskStatus? status,
   }) {
     _id = id;
     _title = title;
@@ -31,29 +31,51 @@ class TaskApiModel {
     _status = status;
   }
 
+  factory TaskApiModel.prepareToCreate({
+    required TaskStatus status,
+    required String description,
+    required String title,
+  }) {
+    return TaskApiModel(
+      status: status,
+      description: description,
+      title: title,
+    );
+  }
+
   TaskApiModel.fromJson(dynamic json) {
     _id = json['_id'] as num?;
     _title = json['title'] as String?;
-    _createdAt = json['createdAt'] as String?;
+    _createdAt = json['createdAt'] as Timestamp?;
     _lastUpdatedAt = json['lastUpdatedAt'] as String?;
     _description = json['description'] as String?;
-    _status = json['status'] as num?;
+    _status = TaskStatus.fromInt(json['status'] as int?);
+  }
+
+  TaskApiModel.fromQueryDocumentSnapshot(DocumentSnapshot snapshot) {
+    final json = snapshot.data()! as Map<String, dynamic>;
+    _id = json['_id'] as num?;
+    _title = json['title'] as String?;
+    _createdAt = json['createdAt'] as Timestamp?;
+    _lastUpdatedAt = json['lastUpdatedAt'] as String?;
+    _description = json['description'] as String?;
+    _status = TaskStatus.fromInt(json['status'] as int?);
   }
 
   num? _id;
   String? _title;
-  String? _createdAt;
+  Timestamp? _createdAt;
   String? _lastUpdatedAt;
   String? _description;
-  num? _status;
+  TaskStatus? _status;
 
   TaskApiModel copyWith({
     num? id,
     String? title,
-    String? createdAt,
+    Timestamp? createdAt,
     String? lastUpdatedAt,
     String? description,
-    num? status,
+    TaskStatus? status,
   }) =>
       TaskApiModel(
         id: id ?? _id,
@@ -68,13 +90,13 @@ class TaskApiModel {
 
   String? get title => _title;
 
-  String? get createdAt => _createdAt;
+  DateTime? get createdAt => _createdAt?.toDate().toLocal();
 
   String? get lastUpdatedAt => _lastUpdatedAt;
 
   String? get description => _description;
 
-  num? get status => _status;
+  TaskStatus? get status => _status;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -86,4 +108,25 @@ class TaskApiModel {
     map['status'] = _status;
     return map;
   }
+
+
+  @override
+  List<Object?> get props => [_id,];
+
+  TaskApiModel setTimeStamps() {
+    _createdAt = Timestamp.now();
+    return this;
+  }
+}
+
+enum TaskStatus{
+  finished,
+  inProgress,
+  canceled;
+
+  factory TaskStatus.fromInt(int? value){
+    value ??= 1;
+    return TaskStatus.values[value];
+  }
+
 }

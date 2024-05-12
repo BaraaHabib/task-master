@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:task_master/app/environment/app_environment.dart';
 import 'package:task_master/firebase_options.dart';
 import 'package:task_master/locator.dart';
-import 'package:task_master_repo/task_manager_repo.dart';
 
 Future<void> bootstrap({required FutureOr<Widget> Function() builder, required AppEnvironment environment}) async {
   FlutterError.onError = (details) {
@@ -18,7 +17,7 @@ Future<void> bootstrap({required FutureOr<Widget> Function() builder, required A
 
       // Initialize Locator and Utils
       await Future.wait([
-        TaskManagerRepo.initAppRepos(
+        Locator.repo.initAppRepos(
             DefaultFirebaseOptions.currentPlatform,
         ),
         Locator.locateServices(environment: environment),

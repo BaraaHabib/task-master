@@ -3,7 +3,7 @@ part of '../task_master_storage.dart';
 /// methods to manipulate app state data
 mixin TasksStorageMixin{
 
-  /// get tasks
+  /// get tasks as json response
   Map<String, dynamic>? get getTasks {
     final sJson = TaskMasterStorage.tasks.get(_tasks,) as String?;
     if (sJson is String) {
@@ -12,7 +12,7 @@ mixin TasksStorageMixin{
     return null;
   }
 
-  /// set session token
+  /// set tasks
   Future<void> setTasks(String? tasks) async =>
       TaskMasterStorage.tasks.put(_tasks, tasks);
 

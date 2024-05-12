@@ -120,7 +120,7 @@ class LoginView extends StatelessWidget {
       showErrorSnackBar(context, state.errorMessage ?? '');
     } else if (state.status == LogInStatusEnum.success) {
       context.read<AppStateCubit>().logIn(state.token!);
-      AutoRouter.of(context).replace(const TasksPage());
+      AutoRouter.of(context).replace(const TasksRoute());
     }
   }
 

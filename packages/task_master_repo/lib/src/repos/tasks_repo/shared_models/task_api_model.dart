@@ -1,10 +1,11 @@
 import 'dart:convert';
-import 'package:network_client_package/network_client.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:equatable/equatable.dart';
 
 part 'task_model.dart';
 
 ///
-class TasksApiModel extends ApiSuccessModel {
+class TasksApiModel with EquatableMixin {
 
   ///
   TasksApiModel({
@@ -86,9 +87,9 @@ class TasksApiModel extends ApiSuccessModel {
     return map;
   }
 
-  @override
-  ApiSuccessModel fromJson(Map<String, dynamic> json) =>
-      TasksApiModel.fromJson(json);
+  // @override
+  // ApiSuccessModel fromJson(Map<String, dynamic> json) =>
+  //     TasksApiModel.fromJson(json);
 
   @override
   List<Object?> get props => [_page, _perPage, _total, _totalPages,];

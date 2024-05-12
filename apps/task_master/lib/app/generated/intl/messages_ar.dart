@@ -22,13 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addTask": MessageLookupByLibrary.simpleMessage("إضافة مهمة"),
+        "briefTaskDescription":
+            MessageLookupByLibrary.simpleMessage("وصف موجز للمهمة"),
+        "cancel": MessageLookupByLibrary.simpleMessage("إلغاء"),
+        "canceled": MessageLookupByLibrary.simpleMessage("ملغية"),
         "continueWithTask": MessageLookupByLibrary.simpleMessage("متابعة"),
+        "date": MessageLookupByLibrary.simpleMessage("تاريخ"),
+        "delete": MessageLookupByLibrary.simpleMessage("حذف"),
+        "description": MessageLookupByLibrary.simpleMessage("التفاصيل"),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
+        "enterTaskTitle": MessageLookupByLibrary.simpleMessage("عنوان المهمه"),
+        "finished": MessageLookupByLibrary.simpleMessage("منتهية"),
         "flutter": MessageLookupByLibrary.simpleMessage("Flutter"),
+        "inProgress": MessageLookupByLibrary.simpleMessage("جارية"),
         "logIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "retry": MessageLookupByLibrary.simpleMessage("إعادة المحاولة"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "task": MessageLookupByLibrary.simpleMessage("مهمه"),
         "taskMaster": MessageLookupByLibrary.simpleMessage("Task master"),
+        "title": MessageLookupByLibrary.simpleMessage("العنوان"),
         "username": MessageLookupByLibrary.simpleMessage("اسم المستخدم"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage(" مرحباً من جديد")
       };

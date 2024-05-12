@@ -26,6 +26,6 @@ class AppStateCubit extends Cubit<AppStateState> {
     Locator.storage.setToken(
       null,
     );
-    context.router.popAndPush(const LoginPage());
+    context.router.popAndPush(const LoginRoute());
   }
 }

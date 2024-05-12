@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:task_master/app/router/app_router.gr.dart';
 
-@AutoRouterConfig(replaceInRouteName: 'View,Route')
+@AutoRouterConfig(replaceInRouteName: 'Page,Route')
 
 /// Holds all the routes that are defined in the app
 /// Used to generate the Router object
@@ -11,15 +11,20 @@ final class AppRouter extends $AppRouter {
       [
         AutoRoute(
           initial: true,
-          page: SplashPage.page,
+          page: SplashRoute.page,
         ),
         CustomRoute(
-          page: LoginPage.page,
+          page: LoginRoute.page,
           transitionsBuilder: TransitionsBuilders.fadeIn,
           durationInMilliseconds: 300,
         ),
         CustomRoute(
-          page: TasksPage.page,
+          page: TasksRoute.page,
+          transitionsBuilder: TransitionsBuilders.fadeIn,
+          durationInMilliseconds: 300,
+        ),
+        CustomRoute(
+          page: AddTaskRoute.page,
           transitionsBuilder: TransitionsBuilders.fadeIn,
           durationInMilliseconds: 300,
         ),

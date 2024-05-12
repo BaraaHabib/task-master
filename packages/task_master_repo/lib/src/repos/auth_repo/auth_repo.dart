@@ -8,7 +8,7 @@ import 'package:task_master_repo/src/resources/configuration.dart';
 /// {@template auth_repo}
 /// basic operations to authenticate users
 /// {@endtemplate}
-class AuthRepo implements IAuthRepo {
+class AuthRepo extends IAuthRepo {
 
   @override
   Future<ApiResponseModel<LogInModel>> authenticate(

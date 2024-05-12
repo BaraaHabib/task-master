@@ -31,7 +31,7 @@ class SplashView extends StatelessWidget {
       listenWhen: (ps, cs) => cs != ps,
       listener: (ctx, cs) {
         if (cs.status == SplashStateEnum.authenticated) {
-          AutoRouter.of(ctx).replace(const TasksPage());
+          AutoRouter.of(ctx).replace(const TasksRoute());
         } else if (cs.status == SplashStateEnum.unauthenticated) {
           showErrorDialog(
             ctx,
